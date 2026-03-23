@@ -12,6 +12,8 @@ from sklearn.metrics import mean_squared_error
 # ========================
 df = pd.read_csv("data_missing.csv", na_values=["--"])
 
+# df = df.dropna(subset=["Rain"])
+
 # เติมค่า missing ใน y (Rain)
 df["Rain"] = df["Rain"].fillna(df["Rain"].mean())
 
